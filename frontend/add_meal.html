@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Ajouter un repas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ajouter un repas - NutriTrack</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="meals.html">Repas</a>
+            <a href="goals.html">Objectifs</a>
+            <a href="stats.html">Statistiques</a>
+            <a href="profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulaire d'ajout de repas</h2>
+            <form id="addMealForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Nom du repas" required aria-label="Nom du repas">
+
+                <label for="calories">Calories :</label>
+                <input type="number" id="calories" name="calories" placeholder="0" min="0" required aria-label="Calories">
+
+                <label for="protein">Protéines (g) :</label>
+                <input type="number" id="protein" name="protein" placeholder="0" min="0" required aria-label="Protéines">
+
+                <label for="carbs">Glucides (g) :</label>
+                <input type="number" id="carbs" name="carbs" placeholder="0" min="0" required aria-label="Glucides">
+
+                <label for="fat">Lipides (g) :</label>
+                <input type="number" id="fat" name="fat" placeholder="0" min="0" required aria-label="Lipides">
+
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required aria-label="Date">
+
+                <div class="form-buttons">
+                    <button type="submit">Ajouter</button>
+                    <button type="button" onclick="window.location.href='meals.html'">Annuler</button>
+                </div>
+
+                <p id="error-message" class="error"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="./js/add_meal.js" defer></script>
+</body>
+</html>

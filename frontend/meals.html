@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Liste des Repas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Repas - NutriTrack</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="meals.html">Repas</a>
+            <a href="goals.html">Objectifs</a>
+            <a href="stats.html">Statistiques</a>
+            <a href="profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Liste des repas</h2>
+            <button onclick="window.location.href='add_meal.html'">Ajouter un repas</button>
+            <div id="message"></div>
+            <table aria-label="Liste des repas">
+                <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Calories</th>
+                        <th scope="col">Protéines</th>
+                        <th scope="col">Glucides</th>
+                        <th scope="col">Lipides</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="meal-list" role="rowgroup">
+
+
+
+                    <!-- Repas générés -->
+
+
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Retour au Dashboard</a></p>
+    </footer>
+    <script src="./js/meals.js"></script>
+</body>
+</html>

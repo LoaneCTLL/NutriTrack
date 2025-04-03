@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Statistiques</title>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+   
+    <script src="./js/chart.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Statistiques - NutriTrack</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="meals.html">Repas</a>
+            <a href="add_meal.html">Ajouter un repas</a>
+            <a href="goals.html">Objectifs</a>
+            <a href="profile.html">Profil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Répartition nutritionnelle</h2>
+            <!-- Graphique en barres -->
+            <canvas id="barChart" width="400" height="200"></canvas>
+        </section>
+
+        <section>
+            <h2>Part de chaque nutriment</h2>
+            <!-- Diagramme en camembert -->
+            <canvas id="pieChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <script>
+        // Données de démonstration
+        const data = {
+            calories: 2200,
+            protein: 150,
+            carbs: 300,
+            fat: 70
+        };
+
+        // Utilisation des fonctions du fichier chart.js
+        const ctxBar = document.getElementById('barChart').getContext('2d');
+        createBarChart(ctxBar, ['Calories', 'Protéines', 'Glucides', 'Lipides'], 
+            [data.calories, data.protein, data.carbs, data.fat], 
+            'Répartition Nutritionnelle');
+
+        const ctxPie = document.getElementById('pieChart').getContext('2d');
+        createPieChart(ctxPie, ['Calories', 'Protéines', 'Glucides', 'Lipides'], 
+            [data.calories, data.protein, data.carbs, data.fat], 
+            'Part de chaque nutriment');
+    </script>
+</body>
+</html>
